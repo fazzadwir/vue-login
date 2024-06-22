@@ -1,9 +1,9 @@
 <template>
-  <nav v-if="this.$store.state.userdate !== null">
+  <nav v-if="this.$store.state.userdata !== null">
     <router-link to="/home">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
