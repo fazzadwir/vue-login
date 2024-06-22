@@ -52,7 +52,6 @@ export default {
           let forcookie = JSON.stringify(userdata);
           cookie.set("userdata", forcookie, { expires: 1 });
           this.$store.commit("SET_LOGIN", forcookie);
-          console.log(user);
           this.$router.push({ path: "/home" });
         });
     },
