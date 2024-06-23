@@ -36,7 +36,6 @@ export default {
           password: this.password,
         })
         .then((response) => {
-          console.log(response);
           this.getDataUser(response.data);
         });
     },
@@ -51,6 +50,7 @@ export default {
           let userdata = Object.assign(res.data, data);
           let forcookie = JSON.stringify(userdata);
           cookie.set("userdata", forcookie, { expires: 1 });
+          console.log(userdata);
           this.$store.commit("SET_LOGIN", forcookie);
           this.$router.push({ path: "/home" });
         });
